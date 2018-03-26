@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="3dp"
+    android:paddingTop="2dp"
 
     app:cardCornerRadius="6dp">
 
