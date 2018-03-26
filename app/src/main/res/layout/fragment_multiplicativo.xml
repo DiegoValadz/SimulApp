@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.diego.simulacion.fragments.MultiplicativoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+
+                android:textAlignment="center"
+                android:elegantTextHeight="true"
+                android:background="@color/colorDivider"
+                android:text="Iteración"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:elegantTextHeight="true"
+                android:background="@color/colorDivider"
+                android:text="Valor "/>
+
+
+        </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/multi_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/add_final"
+        android:layout_margin="15dp"
+        />
+</FrameLayout>
