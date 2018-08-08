@@ -31,6 +31,10 @@ public class Element {
         this.description = description;
     }
 
+    public Element(int image) {
+        this.image = image;
+    }
+
     public String getSubtitle() {
         return subtitle;
     }

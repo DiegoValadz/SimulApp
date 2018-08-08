@@ -23,17 +23,17 @@ public class MixtoFragment extends SecondFragment {
     private Mixto mixto;
     private RecyclerView recyclerView;
     private MixtoAdapter adapter;
+    private int valores[];
 
+    public void setValores(int[] valores) {
+        this.valores = valores;
+    }
 
     public void setMixto(Mixto mixto) {
         this.mixto = mixto;
     }
 
-    public MixtoFragment() {
-
-
-    }
-
+    public MixtoFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -92,6 +92,13 @@ public class MixtoFragment extends SecondFragment {
                     if (xo_v > 0 && a_v > 0 && c_v > 0 && i_v > 0) {
                         if (m_v > xo_v && m_v > a_v && m_v > c_v) {
                             setMixto(new Mixto(xo_v, a_v, c_v, m_v, i_v));
+                            int aux[] = new int[5];
+                            aux[0] = xo_v;
+                            aux[1] = a_v;
+                            aux[2] = c_v;
+                            aux[3] = m_v;
+                            aux[4] = i_v;
+                            setValores(aux);
                             cerrarDialog = true;
                         } else
                             Toast.makeText(getActivity(), "Introduce un módulo mayor que Xo,a,c", Toast.LENGTH_LONG).show();
@@ -103,9 +110,12 @@ public class MixtoFragment extends SecondFragment {
                 }
 
 
-                if (cerrarDialog)
+                if (cerrarDialog) {
                     alertDialog.dismiss();
-                instanciarRecyclerView();
+                    instanciarRecyclerView();
+
+
+                }
             }
         });
 
@@ -117,7 +127,6 @@ public class MixtoFragment extends SecondFragment {
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(llm);
-
 
 
     }

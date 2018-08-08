@@ -14,11 +14,9 @@ import com.diego.simulacion.R;
  */
 public class AcercaDeFragment extends Fragment {
 
-
     public AcercaDeFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,5 +24,4 @@ public class AcercaDeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_acerca_de, container, false);
         return v;
     }
-
 }

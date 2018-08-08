@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MonteCarloFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorIcons"
+                    android:textStyle="bold|italic"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:elegantTextHeight="true"
+                    android:background="@color/colorAccent"
+                    android:text="Cantidad"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorIcons"
+                    android:textStyle="bold|italic"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:elegantTextHeight="true"
+                    android:background="@color/colorAccent"
+                    android:text="Área "/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mont_result_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/button_mon"
+            android:text="Mostrar Números generados"
+            android:background="@color/colorPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/second_linear"
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_i"
+                android:text="N"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="0.5"
+                android:textAlignment="center"/>
+
+
+            <TextView
+                android:id="@+id/item_x"
+                android:layout_width="wrap_content"
+                android:text="X"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/item_y"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Y"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/item_r"
+                android:text="R"
+                android:textColor="@color/colorIcons"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mont_result_rv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>

@@ -53,10 +53,6 @@ public class IntegrantesAdapter extends RecyclerView.Adapter<IntegrantesAdapter.
             nombre = itemView.findViewById(R.id.nombre);
             puesto = itemView.findViewById(R.id.funcion);
             foto = itemView.findViewById(R.id.prof_pic);
-
-
-
-
         }
     }
 }

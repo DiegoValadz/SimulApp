@@ -1,12 +1,12 @@
 package com.diego.simulacion.controller;
 
 public class Metodo {
-	int semilla;
-	int multiplicador;
-	int constante;
-	int modulo;
-	int iteracion;
-	int[] array;
+	public int semilla;
+	public int multiplicador;
+	public int constante;
+	public int modulo;
+	public int iteracion;
+	public int[] array;
 	
 	public Metodo(int s, int m, int c, int md, int i){
 		this.semilla = s;

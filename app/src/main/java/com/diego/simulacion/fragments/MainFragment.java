@@ -43,6 +43,6 @@ public class MainFragment extends Fragment {
 
     private void setRecyclerValues() {
         elements.add(new Element("Generación de números aleatorios ", "Método: Congruencial Mixto \nMétodo: Congruencial Multiplicativo "));
-        elements.add(new Element("Conway","El juego de la vida"));
+        elements.add(new Element("Método de Montecarlo","Resolución de integrales"));
     }
 }

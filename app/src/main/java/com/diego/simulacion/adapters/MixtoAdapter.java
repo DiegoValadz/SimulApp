@@ -16,7 +16,6 @@ import com.diego.simulacion.controller.Mixto;
 public class MixtoAdapter extends RecyclerView.Adapter<MixtoAdapter.MixtoViewHolder> {
     private Mixto mixto;
 
-
     public MixtoAdapter(Mixto mixto) {
         this.mixto = mixto;
     }
@@ -37,7 +36,7 @@ public class MixtoAdapter extends RecyclerView.Adapter<MixtoAdapter.MixtoViewHol
     @Override
     public int getItemCount() {
 
-        return mixto.getI();
+        return mixto.toArray().length;
     }
 
     public class MixtoViewHolder extends RecyclerView.ViewHolder {
@@ -46,7 +45,6 @@ public class MixtoAdapter extends RecyclerView.Adapter<MixtoAdapter.MixtoViewHol
             super(itemView);
             iterTxt = itemView.findViewById(R.id.iteracion_text);
             numTxt = itemView.findViewById(R.id.number_txt);
-
         }
     }
 }

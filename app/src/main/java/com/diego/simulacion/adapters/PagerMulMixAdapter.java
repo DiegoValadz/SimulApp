@@ -28,7 +28,6 @@ public class PagerMulMixAdapter extends FragmentStatePagerAdapter {
             default:
                 return null;
         }
-
     }
 
     @Override

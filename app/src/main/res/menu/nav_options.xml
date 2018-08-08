@@ -24,9 +24,13 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/proyecto_1"
+                android:id="@+id/proyecto_1"
+                android:icon="@drawable/project_icon"
+                android:title="Proyecto 1" />
+                <item
+                    android:id="@+id/proyecto_2"
                     android:icon="@drawable/project_icon"
-                    android:title="Proyecto 1" />
+                    android:title="Proyecto 2" />
             </group>
         </menu>
     </item>

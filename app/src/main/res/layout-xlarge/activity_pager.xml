@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/cont_frag"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.diego.simulacion.activities.SecondActivity"
+    tools:context="com.diego.simulacion.activities.PagerActivity"
     android:orientation="vertical">
 
     <include android:id="@+id/second_toolbar" layout="@layout/toolbar"/>

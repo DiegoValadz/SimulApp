@@ -20,8 +20,6 @@ public class MultiAdapter extends RecyclerView.Adapter<MultiAdapter.MultiViewHol
         this.multiplicativo = multiplicativo;
     }
 
-
-
     @Override
     public MultiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_fragment,parent,false);
@@ -41,7 +39,9 @@ public class MultiAdapter extends RecyclerView.Adapter<MultiAdapter.MultiViewHol
     }
 
     public class MultiViewHolder extends RecyclerView.ViewHolder {
+
         private TextView iterTxt,numTxt;
+
         public MultiViewHolder(View itemView) {
             super(itemView);
             iterTxt = itemView.findViewById(R.id.iteracion_text);

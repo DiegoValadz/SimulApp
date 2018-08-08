@@ -3,7 +3,6 @@ package com.diego.simulacion.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,25 +25,25 @@ public class IntegrantesFragment extends Fragment {
     private IntegrantesAdapter adapter;
     private List<Element> elements = new ArrayList<>();
 
-
-
     public IntegrantesFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_integrantes, container, false);
-        setElements();
         recyclerView = v.findViewById(R.id.integrantes_rv);
+        setElements();
+        instanceRecycler();
+        return v;
+    }
+
+    private void instanceRecycler() {
         adapter = new IntegrantesAdapter(elements);
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(llm);
-        return v;
-
     }
 
     private void setElements() {

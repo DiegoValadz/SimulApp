@@ -1,7 +1,9 @@
 package com.diego.simulacion.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
@@ -9,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.diego.simulacion.R;
-import com.diego.simulacion.activities.SecondActivity;
+import com.diego.simulacion.utilities.Utilities;
 import com.diego.simulacion.models.Element;
 import java.util.List;
 
@@ -30,9 +32,7 @@ public class MainAdapter extends Adapter<MainAdapter.MainViewHolder> {
     @Override
     public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_main_rv,parent,false);
-        MainViewHolder vh = new MainViewHolder(v);
-
-        return vh;
+        return new MainViewHolder(v);
     }
 
     @Override
@@ -57,13 +57,11 @@ public class MainAdapter extends Adapter<MainAdapter.MainViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, SecondActivity.class);
-                    intent.putExtra("selector",getAdapterPosition());
+                    Activity activity = (AppCompatActivity) context;
+                    Intent intent = Utilities.intent(activity,getAdapterPosition());
                     context.startActivity(intent);
                 }
             });
-
         }
-
     }
 }
